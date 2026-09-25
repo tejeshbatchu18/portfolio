@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Tejesh Batchu — Computer Science (Data Science) undergraduate, developer and data enthusiast. Portfolio showcasing projects, skills, and certifications." />
+  <meta name="description" content="Tejesh Batchu — Computer Science (Data Science) undergraduate, developer and data enthusiast. Portfolio showcasing full-stack, AI, data science projects, skills, and certifications." />
   <meta name="keywords" content="Tejesh Batchu, Computer Science, Data Science, Portfolio, Python, Java, Web Developer, PVPSIT" />
   <meta name="author" content="Tejesh Batchu" />
   <meta property="og:title" content="Tejesh Batchu | CS & Data Science Portfolio" />
-  <meta property="og:description" content="B.Tech CS (Data Science) undergraduate with a 9.25 CGPA. Explore my projects, skills, and certifications." />
+  <meta property="og:description" content="B.Tech CS (Data Science) undergraduate with a 9.25 CGPA. Explore my full-stack, AI, and data-driven projects." />
   <meta property="og:image" content="assets/og-image.png" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -445,6 +445,13 @@ body {
   transform: translateY(-2px);
 }
 
+.project-card--clickable { cursor: pointer; }
+.project-card--clickable:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+.project-card__links { display: flex; flex-wrap: wrap; gap: 1rem; }
+
 /* hide oversized project numbers */
 .project-card__number { display: none; }
 
@@ -668,7 +675,7 @@ body {
         <h1 class="hero__name">Hi, I'm Tejesh Batchu</h1>
         <p class="hero__tagline">Computer Science (Data Science) Undergraduate</p>
         <p class="hero__sub">
-          B.Tech student at PVPSIT with a CGPA of 9.25. Interested in Software Development, Data Science, and Problem Solving.
+          B.Tech student at PVPSIT with a CGPA of 9.25. I enjoy building full-stack applications, AI-powered solutions, and data-driven projects.
         </p>
         <div class="hero__actions">
           <a href="#projects" class="btn btn--primary">View Projects</a>
@@ -731,13 +738,13 @@ body {
             <p>
               I'm <strong>Tejesh Batchu</strong>, a Computer Science (Data Science) undergraduate at
               <strong>Prasad V Potluri Siddhartha Institute of Technology</strong>, maintaining a
-              <strong>CGPA of 9.25</strong>. I build data-driven web applications and love turning raw
-              numbers into meaningful insight.
+              <strong>CGPA of 9.25</strong>. I enjoy building full-stack applications, AI-powered tools,
+              and data-driven solutions.
             </p>
             <p>
-              My background spans full-stack web fundamentals, data structures, database systems, and
-              applied data science. I'm comfortable working across the Python/Java ecosystem and have
-              hands-on experience with real-world datasets.
+              My interests span full-stack development, Generative AI, Retrieval-Augmented Generation,
+              data structures, databases, and applied data science. I enjoy turning ideas into practical
+              projects and continuously learning new technologies.
             </p>
           </div>
           <dl class="about__stats">
@@ -751,11 +758,11 @@ body {
             </div>
             <div class="about__stat">
               <dt>Projects</dt>
-              <dd>2+</dd>
+              <dd>3</dd>
             </div>
             <div class="about__stat">
               <dt>Certifications</dt>
-              <dd>5</dd>
+              <dd>4</dd>
             </div>
           </dl>
         </div>
@@ -823,6 +830,20 @@ body {
                   <div class="skill-item__fill"></div>
                 </div>
                 <span class="skill-item__pct">72%</span>
+              </li>
+              <li class="skill-item" data-level="70">
+                <span class="skill-item__name">React.js</span>
+                <div class="skill-item__bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="React.js proficiency 70%">
+                  <div class="skill-item__fill"></div>
+                </div>
+                <span class="skill-item__pct">70%</span>
+              </li>
+              <li class="skill-item" data-level="65">
+                <span class="skill-item__name">Node.js</span>
+                <div class="skill-item__bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="Node.js proficiency 65%">
+                  <div class="skill-item__fill"></div>
+                </div>
+                <span class="skill-item__pct">65%</span>
               </li>
             </ul>
           </div>
@@ -910,50 +931,82 @@ body {
         </header>
         <div class="projects__grid">
 
-          <article class="project-card" aria-label="IPL Cricket Statistics Dashboard project">
+          <article class="project-card project-card--clickable" data-project-url="https://ai-career-coach-rag.streamlit.app/" tabindex="0" role="link" aria-label="Open AI Career Coach live demo">
             <div class="project-card__number" aria-hidden="true">01</div>
             <div class="project-card__body">
-              <h3 class="project-card__title">IPL Cricket Statistics Dashboard</h3>
+              <h3 class="project-card__title">AI Career Coach (RAG)</h3>
               <p class="project-card__desc">
-                An interactive data dashboard visualizing Indian Premier League cricket statistics.
-                Processes match data to surface team performance trends, top batsmen/bowlers, and
-                season-by-season comparisons using Python and data visualization libraries.
+                AI-powered career guidance application using Retrieval-Augmented Generation to deliver
+                personalized, context-aware recommendations and career guidance.
               </p>
               <ul class="project-card__tags" aria-label="Technologies used">
                 <li>Python</li>
-                <li>Data Analysis</li>
-                <li>Visualization</li>
-                <li>DBMS</li>
+                <li>LangChain</li>
+                <li>Gemini API</li>
+                <li>Streamlit</li>
+                <li>FAISS</li>
               </ul>
             </div>
             <div class="project-card__links">
-              <a href="https://github.com/tejeshbatchu18" target="_blank" rel="noopener noreferrer"
-                 class="project-card__link" aria-label="View IPL Dashboard source code on GitHub">
-                GitHub →
+              <a href="https://ai-career-coach-rag.streamlit.app/" target="_blank" rel="noopener noreferrer"
+                 class="project-card__link" aria-label="Open AI Career Coach live demo">
+                Live Demo ↗
+              </a>
+              <a href="https://github.com/tejeshbatchu18/ai-career-coach-rag" target="_blank" rel="noopener noreferrer"
+                 class="project-card__link" aria-label="View AI Career Coach source code on GitHub">
+                GitHub ↗
               </a>
             </div>
           </article>
 
-          <article class="project-card" aria-label="Personal Portfolio Website project">
+          <article class="project-card project-card--clickable" data-project-url="https://github.com/tejeshbatchu18/redrob-candidate-ranker" tabindex="0" role="link" aria-label="Open Candidate Ranker GitHub repository">
             <div class="project-card__number" aria-hidden="true">02</div>
             <div class="project-card__body">
-              <h3 class="project-card__title">Personal Portfolio Website</h3>
+              <h3 class="project-card__title">Candidate Ranker -- Full-Stack AI Application</h3>
               <p class="project-card__desc">
-                A fully responsive, ATS-friendly personal portfolio built with pure HTML, CSS, and
-                JavaScript. Features a dark theme, animated hero, skill progress indicators, project
-                showcases, and a contact section — no frameworks, no dependencies.
+                Full-stack recruitment platform combining React.js and Node.js with an AI ranking pipeline
+                for resume-job matching, multi-signal scoring, and explainable candidate ranking.
               </p>
               <ul class="project-card__tags" aria-label="Technologies used">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Responsive Design</li>
+                <li>React.js</li>
+                <li>Node.js</li>
+                <li>Python</li>
+                <li>NLP</li>
+                <li>FAISS</li>
               </ul>
             </div>
             <div class="project-card__links">
-              <a href="https://github.com/tejeshbatchu18" target="_blank" rel="noopener noreferrer"
-                 class="project-card__link" aria-label="View Portfolio source code on GitHub">
-                GitHub →
+              <a href="https://github.com/tejeshbatchu18/redrob-candidate-ranker" target="_blank" rel="noopener noreferrer"
+                 class="project-card__link" aria-label="View Candidate Ranker source code on GitHub">
+                GitHub ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card project-card--clickable" data-project-url="https://flash-news-six.vercel.app/" tabindex="0" role="link" aria-label="Open Flash News live demo">
+            <div class="project-card__number" aria-hidden="true">03</div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Flash News</h3>
+              <p class="project-card__desc">
+                Responsive React-based news application with category filtering, search, reading modes,
+                bookmarking, and offline access to saved articles.
+              </p>
+              <ul class="project-card__tags" aria-label="Technologies used">
+                <li>React.js</li>
+                <li>Vite</li>
+                <li>JavaScript</li>
+                <li>Tailwind CSS</li>
+                <li>GNews API</li>
+              </ul>
+            </div>
+            <div class="project-card__links">
+              <a href="https://flash-news-six.vercel.app/" target="_blank" rel="noopener noreferrer"
+                 class="project-card__link" aria-label="Open Flash News live demo">
+                Live Demo ↗
+              </a>
+              <a href="https://github.com/tejeshbatchu18/flash-news" target="_blank" rel="noopener noreferrer"
+                 class="project-card__link" aria-label="View Flash News source code on GitHub">
+                GitHub ↗
               </a>
             </div>
           </article>
@@ -973,19 +1026,19 @@ body {
         </header>
         <div class="certs__grid">
 
+          <article class="cert-card" aria-label="Agentic AI Certified Foundations Associate by Oracle">
+            <div class="cert-card__icon" aria-hidden="true">◈</div>
+            <div class="cert-card__body">
+              <span class="cert-card__issuer">Oracle</span>
+              <h3 class="cert-card__title">Agentic AI Certified Foundations Associate</h3>
+            </div>
+          </article>
+
           <article class="cert-card" aria-label="Salesforce AI Associate certification">
             <div class="cert-card__icon" aria-hidden="true">◈</div>
             <div class="cert-card__body">
               <span class="cert-card__issuer">Salesforce</span>
               <h3 class="cert-card__title">AI Associate</h3>
-            </div>
-          </article>
-
-          <article class="cert-card" aria-label="Python Essentials certification by Cisco">
-            <div class="cert-card__icon" aria-hidden="true">◈</div>
-            <div class="cert-card__body">
-              <span class="cert-card__issuer">Cisco</span>
-              <h3 class="cert-card__title">Python Essentials</h3>
             </div>
           </article>
 
@@ -997,19 +1050,11 @@ body {
             </div>
           </article>
 
-          <article class="cert-card" aria-label="Problem Solving Using C certification">
+          <article class="cert-card" aria-label="Introduction to Machine Learning certification by Cisco">
             <div class="cert-card__icon" aria-hidden="true">◈</div>
             <div class="cert-card__body">
-              <span class="cert-card__issuer">Programming</span>
-              <h3 class="cert-card__title">Problem Solving Using C</h3>
-            </div>
-          </article>
-
-          <article class="cert-card" aria-label="Basics of Web Development certification">
-            <div class="cert-card__icon" aria-hidden="true">◈</div>
-            <div class="cert-card__body">
-              <span class="cert-card__issuer">Web Development</span>
-              <h3 class="cert-card__title">Basics of Web Development</h3>
+              <span class="cert-card__issuer">Cisco</span>
+              <h3 class="cert-card__title">Introduction to Machine Learning</h3>
             </div>
           </article>
 
@@ -1187,7 +1232,26 @@ body {
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 
-    /* ── 7. SKILL BAR ANIMATION ─────────────────────── */
+    /* ── 7. PROJECT CARD NAVIGATION ────────────────── */
+    document.querySelectorAll('.project-card--clickable').forEach(card => {
+      const url = card.dataset.projectUrl;
+      if (!url) return;
+
+      card.addEventListener('click', e => {
+        if (e.target.closest('a')) return;
+        window.open(url, '_blank', 'noopener,noreferrer');
+      });
+
+      card.addEventListener('keydown', e => {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        if (e.target.closest('a')) return;
+        e.preventDefault();
+        window.open(url, '_blank', 'noopener,noreferrer');
+      });
+    });
+
+
+    /* ── 8. SKILL BAR ANIMATION ─────────────────────── */
     const skillItems = document.querySelectorAll('.skill-item');
 
     const skillObserver = new IntersectionObserver(entries => {
